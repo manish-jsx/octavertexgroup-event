@@ -1,22 +1,32 @@
-"use client"; // Add this line
-import Head from 'next/head';
-import AnimatedComponent from './components/AnimatedComponent';
-import ThreeCanvas from './components/ThreeCanvas';
-import styles from './page.module.css';
+import Hero from '../components/Hero';
+import Services from '../components/Services';
+import Works from '../components/Works';
+import Contact from '../components/Contact';
+import Newsletter from '../components/Newsletter';
+import Footer from '../components/Footer';
+import Link from 'next/link';  // Import Link component
 
-export default function Home() {
+const Home = () => {
   return (
-    <div>
-      <Head>
-        <title>Octavertex Group</title>
-        <meta name="description" content="Bold Models Wanted!" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className={styles.main}>
-        <h1>Welcome to Octavertex Group</h1>
-        <AnimatedComponent />
-        <ThreeCanvas />
-      </main>
-    </div>
+    <>
+      <Hero />
+      <Services />
+   
+      {/* Add a button or link to navigate to the registration page */}
+      <div className="text-center mt-8">
+        <Link href="/registration" legacyBehavior>
+          <a className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+            Register Now
+          </a>
+        </Link>
+      </div>
+      <Works />
+      <Contact />
+      <Newsletter />
+      <Footer />
+      
+    </>
   );
 }
+
+export default Home;
