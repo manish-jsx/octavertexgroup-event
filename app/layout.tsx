@@ -1,22 +1,36 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+// import '../styles/globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+// export default function RootLayout({ children }) {
+//   return (
+//     <html lang='en'>
+//       <body>{children}</body>
+//     </html>
+//   );
+// }
 
-export const metadata: Metadata = {
-  title: 'Bhubaneswar Models',
-  description: 'Join our exciting new project and shine!',
+
+
+
+
+// components/Layout.tsx
+'use client';
+
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import '../styles/navbar.css';
+import '../styles/globals.css';
+
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return (
+    <div>
+      <Navbar />
+      <main className="container mx-auto py-12">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang='en'>
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
-}
+export default Layout;

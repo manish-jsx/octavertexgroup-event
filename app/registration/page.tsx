@@ -3,6 +3,8 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 const Registration: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -28,7 +30,10 @@ const Registration: React.FC = () => {
   };
 
   return (
+    <div>
+    <Navbar/>
     <div className='container mx-auto p-4'>
+       
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -118,6 +123,8 @@ const Registration: React.FC = () => {
           </button>
         </form>
       </motion.div>
+    </div>
+    <Footer/>
     </div>
   );
 };

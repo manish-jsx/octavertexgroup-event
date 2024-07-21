@@ -1,0 +1,67 @@
+/* navbar.css */
+
+/* Ensure the navbar has proper height and padding */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* SVG logo styling */
+.logo-container {
+  display: flex;
+
+  align-items: center;
+  height: 60px; /* Adjust to match the navbar height */
+}
+
+.logo {
+  height: 100%;
+  width: auto;
+}
+
+.brandname {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  justify-content:space-around;
+}
+
+.octavertex {
+  
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.media {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+/* Navigation links styling */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin-left: 20px; /* Adjust spacing between items */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff; /* Adjust color */
+  font-weight: bold;
+  font-size: 16px; /* Adjust font size */
+}
+
+.nav-links a:hover {
+  color: #FF5733; /* Change color on hover */
+}

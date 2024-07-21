@@ -4,11 +4,14 @@ import Works from '../components/Works';
 import Contact from '../components/Contact';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
+
+import Navbar from '../components/Navbar';
 import Link from 'next/link';  // Import Link component
 
 const Home = () => {
   return (
     <>
+      <Navbar />
       <Hero />
       <Services />
    
