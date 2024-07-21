@@ -17,10 +17,10 @@ const Hero = () => {
 
       STROKE_DASHOFFSET: number;
       MAX_DISTANCE: number;
-      centerX: number;
-      centerY: number;
-      screenX: number;
-      screenY: number;
+      centerX!: number;
+      centerY!: number;
+      screenX!: number;
+      screenY!: number;
 
       updateCenter() {
         const points = this.$element.getAttribute('points')!.split(' ');
@@ -63,9 +63,9 @@ const Hero = () => {
         $svg?: SVGSVGElement;
         $polylines?: Polyline[];
       } = {};
-      svgRect: DOMRect;
-      viewBoxWidth: number;
-      viewBoxHeight: number;
+      svgRect!: DOMRect;
+      viewBoxWidth!: number;
+      viewBoxHeight!: number;
 
       constructor(public el: HTMLElement) {
         this.mount();
