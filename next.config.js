@@ -1,5 +1,7 @@
-// next.config.js
+
+
+// Example next.config.js
 module.exports = {
   reactStrictMode: true,
-  trailingSlash: true,
+  // Ensure no custom configurations are affecting static files
 };

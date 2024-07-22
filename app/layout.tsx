@@ -1,36 +1,22 @@
-// import '../styles/globals.css';
-
-// export default function RootLayout({ children }) {
-//   return (
-//     <html lang='en'>
-//       <body>{children}</body>
-//     </html>
-//   );
-// }
-
-
-
-
-
-// components/Layout.tsx
-'use client';
-
-import React from 'react';
+// app/layout.tsx
+import '../styles/globals.css';
+import '../styles/navbar.css';
+import '../styles/pattern-reveal.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import '../styles/navbar.css';
-import '../styles/globals.css';
 
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div>
-      <Navbar />
-      <main className="container mx-auto py-12">
+    <html lang="en">
+      <body>
+        <Navbar />
         {children}
-      </main>
-      <Footer />
-    </div>
+        <Footer />
+      </body>
+    </html>
   );
-};
-
-export default Layout;
+}

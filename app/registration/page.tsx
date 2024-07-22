@@ -3,8 +3,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+
 
 const Registration: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -30,8 +29,7 @@ const Registration: React.FC = () => {
   };
 
   return (
-    <div>
-    <Navbar/>
+ 
     <div className='container mx-auto p-4'>
        
       <motion.div
@@ -124,8 +122,7 @@ const Registration: React.FC = () => {
         </form>
       </motion.div>
     </div>
-    <Footer/>
-    </div>
+   
   );
 };
 

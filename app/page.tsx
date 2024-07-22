@@ -3,15 +3,18 @@ import Services from '../components/Services';
 import Works from '../components/Works';
 import Contact from '../components/Contact';
 import Newsletter from '../components/Newsletter';
-import Footer from '../components/Footer';
 
-import Navbar from '../components/Navbar';
+import '../styles/globals.css';
+import '../styles/navbar.css';
+import '../styles/pattern-reveal.css';
+
+
 import Link from 'next/link';  // Import Link component
 
 const Home = () => {
   return (
     <>
-      <Navbar />
+      
       <Hero />
       <Services />
    
@@ -26,7 +29,7 @@ const Home = () => {
       <Works />
       <Contact />
       <Newsletter />
-      <Footer />
+
       
     </>
   );

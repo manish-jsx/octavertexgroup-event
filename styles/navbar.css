@@ -8,40 +8,41 @@
   padding: 10px 20px;
   background-color: #333;
   color: #fff;
+  position: sticky; /* Make the navbar sticky */
+  top: 0; /* Stick to the top of the page */
+  width: 100%; /* Ensure it spans the full width of the viewport */
+  z-index: 1000; 
 }
 
 /* SVG logo styling */
 .logo-container {
   display: flex;
-
   align-items: center;
-  height: 60px; /* Adjust to match the navbar height */
+  height: 8vh; /* Adjust to match the navbar height */
 }
 
 .logo {
-  height: 100%;
+  height: 8vh;
   width: auto;
 }
 
-.brandname {
+.brand-name {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  display: flex;
-  flex-direction: column;
   margin-left: 10px;
   justify-content:space-around;
 }
 
+/* Increase size of the OctaVertex logo */
 .octavertex {
-  
-  font-size: 1.8rem;
-  font-weight: bold;
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
 }
 
 .media {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: left;
+  width: 100px;
+  height: 30px;
 }
+
 /* Navigation links styling */
 .nav-links {
   display: flex;
@@ -52,16 +53,56 @@
 }
 
 .nav-links li {
-  margin-left: 20px; /* Adjust spacing between items */
+  margin-left: 20px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #ffffff; /* Adjust color */
+  color: #ffffff;
   font-weight: bold;
-  font-size: 16px; /* Adjust font size */
+  font-size: 16px;
 }
 
 .nav-links a:hover {
-  color: #FF5733; /* Change color on hover */
+  color: #FF5733;
+}
+/* Mobile responsiveness */
+.menu-button {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 80px; 
+  cursor: pointer;
+  margin-left: auto; /* Move the button to the right */
+}
+
+/* Show menu button and hide nav-links on small screens */
+@media (max-width: 768px) {
+
+  .navbar{
+    height: 10vh;
+  }
+  .nav-links {
+    display: none; /* Hide the nav links by default */
+    flex-direction: column;
+    width: 30%;
+    background-color: #333;
+    position: absolute;
+    top: 10vh; /* Adjust based on the height of the navbar */
+    right: 0;
+  }
+
+  .nav-links.open {
+    display: flex; /* Show the nav links when menu is open */
+  }
+
+  .nav-links li {
+    margin: 10px 0; /* Adjust spacing for mobile */
+    text-align: center;
+  }
+
+  .menu-button {
+    display: block; /* Show the menu button on mobile */
+  }
 }

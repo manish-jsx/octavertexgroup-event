@@ -24,10 +24,10 @@ const Footer = () => {
               <polygon points="50,100 150,100 100,200" fill="url(#gradient1)" />
             </g>
           </svg>
-          <div className='brandname ml-2'>
-            <div className='octavertex'>OctaVertex</div>
-            <div className='media'>Media</div>
-          </div>
+          <div className='brand-name'>
+          <img src="./logo/OctaVertex.svg" alt="OctaVertex" className="octavertex" />
+          <img src="./logo/Media.svg" alt="Media" className="media" />
+        </div>
         </div>
         <ul className='flex justify-center space-x-8 mb-4'>
           <li><Link href='/'>Home</Link></li>
