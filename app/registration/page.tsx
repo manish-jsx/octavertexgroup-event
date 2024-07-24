@@ -11,7 +11,7 @@ const Registration: React.FC = () => {
     contact: '',
     photo: '',
     bio: '',
-    whyBold: '',
+    whyCapable: '',
     experience: ''
   });
 
@@ -38,9 +38,9 @@ const Registration: React.FC = () => {
         transition={{ duration: 1 }}
         className='max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg'
       >
-        <h1 className='text-2xl font-bold mb-4'>Welcome Bold Models!</h1>
+        <h1 className='text-2xl font-bold mb-4'>Welcome User!</h1>
         <p className='mb-4'>
-          Thank you for your interest in joining our exciting new project in Bhubaneswar. We're on the lookout for dynamic, confident individuals who are ready to take the fashion world by storm. This is a fantastic opportunity to showcase your unique style and get paid for doing what you love.
+          Thank you for your interest in joining our exciting new project in Bhubaneswar. We're on the lookout for dynamic, confident individuals who are ready to take the digital world by storm. This is a fantastic opportunity to showcase your unique talent and get paid for doing what you love.
         </p>
         <p className='mb-4'>
           Please fill out the form below with your details. This will help us get to know you better and assess if you're a fit for our upcoming assignments.
@@ -93,18 +93,18 @@ const Registration: React.FC = () => {
             />
           </div>
           <div className='mb-4'>
-            <label className='block text-gray-700 mb-2' htmlFor='whyBold'>Why Do You Think You're Bold Enough?</label>
+            <label className='block text-gray-700 mb-2' htmlFor='whyBold'>Why Do You Think You're Capable Enough?</label>
             <textarea
               id='whyBold'
               name='whyBold'
-              value={formData.whyBold}
+              value={formData.whyCapable}
               onChange={handleChange}
               className='w-full p-2 border border-gray-300 rounded'
               required
             />
           </div>
           <div className='mb-4'>
-            <label className='block text-gray-700 mb-2' htmlFor='experience'>Previous Modeling Experience (if applicable)</label>
+            <label className='block text-gray-700 mb-2' htmlFor='experience'>Previous Working Experience (if applicable)</label>
             <textarea
               id='experience'
               name='experience'
