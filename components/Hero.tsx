@@ -145,7 +145,7 @@ const Hero = () => {
           <polyline points="620 180 640 140 620 100 640 60 580 60 600 100" style={{ strokeDashoffset: '191.07px' }}></polyline>
         </svg>
       </div>
-   
+
       <div className='relative z-10 text-white flex justify-center items-center h-full'>
         <motion.div
           initial={{ opacity: 0 }}
@@ -154,17 +154,18 @@ const Hero = () => {
           className='text-center'
         >
           <h1 className='text-4xl md:text-6xl font-bold mb-4'>
-            🚀 Bhubanshwar 🚀
+            🚀 Octavertex Media 🚀
           </h1>
           <p className='text-lg md:text-2xl mb-8'>
-            Are you ready to take the fashion world by storm? <br/>  Join our exciting new project and shine!
+            Ready to elevate your business with cutting-edge IT solutions and strategic marketing? <br /> Let's discuss how we can bring your projects to life!
           </p>
-          <Link href='/registration'>
+          <Link href='/schedule-meeting'>
             <span className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer'>
-              Apply Now
+              Schedule a Meeting
             </span>
           </Link>
         </motion.div>
+
       </div>
     </section>
   );

@@ -13,9 +13,9 @@ const Contact = () => {
           <p>Location: Bhubaneswar</p>
           <p>admin@octavertexgroup.com</p>
           <div className='social-media mt-4'>
-            <a href='https://facebook.com' className='mx-2'>Facebook</a>
-            <a href='https://instagram.com' className='mx-2'>Instagram</a>
-            <a href='https://twitter.com' className='mx-2'>Twitter</a>
+            <a href='https://facebook.com/octavertexmedia' className='mx-2'>Facebook</a>
+            <a href='https://instagram.com/octavertexmedia' className='mx-2'>Instagram</a>
+            <a href='https://x.com/octavertexmedia' className='mx-2'>Twitter</a>
           </div>
         </div>
       </div>
