@@ -159,7 +159,7 @@ const Hero = () => {
           <p className='text-lg md:text-2xl mb-8'>
             Ready to elevate your business with cutting-edge IT solutions and strategic marketing? <br /> Let's discuss how we can bring your projects to life!
           </p>
-          <Link href='/schedule-meeting'>
+          <Link href='https://cal.com/octavertexmedia/'>
             <span className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer'>
               Schedule a Meeting
             </span>
