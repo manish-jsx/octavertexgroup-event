@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ModeToggle } from './ThemeButton';
 
 const Footer = () => {
   return (
@@ -34,6 +35,7 @@ const Footer = () => {
           <li><Link href='#services'>Services</Link></li>
           <li><Link href="/portfolio">Portfolio</Link></li>
           <li><Link href='#contact'>Contact Us</Link></li>
+          <ModeToggle/>
         </ul>
         <p>© 2024 OctaVertex Media. All rights reserved.</p>
         <div className='space-x-2'>

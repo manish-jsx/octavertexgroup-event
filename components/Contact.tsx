@@ -67,11 +67,11 @@ const Contact = () => {
       <BackgroundBeams />
       
       <div className="container mx-auto px-4 relative z-10">
-        <TextRevealCard
+        {/* <TextRevealCard
           text="Get in Touch"
           revealText="Let's Build Something Amazing Together"
           className="mb-12 w-full"
-        />
+        /> */}
 
         <div className="max-w-4xl mx-auto">
           <Card className="backdrop-blur-sm bg-white/90">

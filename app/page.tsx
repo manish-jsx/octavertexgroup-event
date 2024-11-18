@@ -13,6 +13,7 @@ import '../styles/navbar.css';
 import Link from 'next/link';  // Import Link component
 import Domain from '@/components/Domain';
 import { FeaturesSection } from '@/components/FeatureSection';
+import Testimonials from '@/components/Testimonials';
 
 
 
@@ -36,6 +37,7 @@ const Home = () => {
       <Domain/>
 
 <FeaturesSection/>
+<Testimonials/>
       <Contact />
 
 
