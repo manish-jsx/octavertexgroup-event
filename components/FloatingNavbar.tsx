@@ -37,7 +37,8 @@ export default function FloatingNavbar() {
   ];
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full hidden lg:block">
+   
       <FloatingNav navItems={navItems} />
       
     </div>
