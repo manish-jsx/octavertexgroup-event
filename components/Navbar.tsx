@@ -1,101 +1,159 @@
-'use client';
+"use client";
+
+import React from "react";
+import { IconAlertTriangle, IconEye, IconLoader, IconTable, IconTooltip } from "@tabler/icons-react";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuContent,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import Icons from "@/components/Icons";
 
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import '../styles/globals.css'; // Correct path to the global styles
-import '../styles/navbar.css';  // Adjust path as necessary
+// Define types for ListItem props
+interface ListItemProps {
+  href: string;
+  title: string;
+  icon?: JSX.Element;
+  children: React.ReactNode;
+  className?: string;
+}
+// import { IconAlertTriangle, IconEye, IconLoader, IconTab, IconTooltip } from "@tabler/icons-react";
 
-const Navbar: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const components = [
+  {
+    title: "Alert Dialog",
+    href: "/docs/primitives/alert-dialog",
+    description: "A modal dialog that interrupts the user with important content and expects a response.",
+    icon: IconAlertTriangle, // Pass the component, not JSX element
+  },
+  {
+    title: "Hover Card",
+    href: "/docs/primitives/hover-card",
+    description: "For sighted users to preview content available behind a link.",
+    icon: IconEye,
+  },
+  {
+    title: "Progress",
+    href: "/docs/primitives/progress",
+    description: "Displays an indicator showing task completion progress.",
+    icon: IconLoader,
+  },
+  {
+    title: "Tabs",
+    href: "/docs/primitives/tabs",
+    description: "Layered sections of content displayed one at a time.",
+    icon: IconTable,
+  },
+  {
+    title: "Tooltip",
+    href: "/docs/primitives/tooltip",
+    description: "Displays info when hovering over an element.",
+    icon: IconTooltip,
+  },
+];
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
+export default function Navbar() {
   return (
-    <nav className='navbar'>
-      {/* Container for the logo */}
-      <motion.div
-        className='logo-container'
-        initial={{ opacity: 0, y: -20 }} // Initial animation state
-        animate={{ opacity: 1, y: 0 }} // Final animation state
-        transition={{ duration: 0.5 }} // Animation duration
-      >
-      
+    // <div className="flex justify-center bg-gray-900 text-white py-4">
+    //      <Icons/>
+    <div className="flex flex-row flex-nowrap justify-evenly items-center content-stretch py-4 bg-gray-900 text-white">
+        <Icons/>
+      <NavigationMenu>
+        <NavigationMenuList className="flex items-center space-x-6">
+          {/* Getting Started Menu */}
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Getting Started</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-gray-800 text-white rounded-lg shadow-lg">
+                <li className="row-span-3">
+                  <Link
+                    href="/"
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-gray-700/50 to-gray-800 p-6 no-underline outline-none focus:shadow-md"
+                  >
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                      <div className="mb-2 mt-4 text-lg font-medium">shadcn/ui</div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        Beautifully designed components built with Radix UI and Tailwind CSS.
+                      </p>
+                    </motion.div>
+                  </Link>
+                </li>
+                <ListItem href="/docs" title="Introduction">
+                  Re-usable components built using Radix UI and Tailwind CSS.
+                </ListItem>
+                <ListItem href="/docs/installation" title="Installation">
+                  How to install dependencies and structure your app.
+                </ListItem>
+                <ListItem href="/docs/primitives/typography" title="Typography">
+                  Styles for headings, paragraphs, lists, etc.
+                </ListItem>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
+          {/* Components Menu */}
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-gray-800 text-white rounded-lg shadow-lg">
+                {components.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                    icon={component.icon}
+                  >
+                    {component.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-        <Link  href="/" >
-        <div className="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" className='logo'>
-              <defs>
-                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#FF5733', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#C70039', stopOpacity: 1 }} />
-                </linearGradient>
-                <filter id="f1" x="0" y="0" width="150%" height="150%">
-                  <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5" />
-                  <feGaussianBlur in="offOut" result="blurOut" stdDeviation="3" />
-                  <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
-                </filter>
-              </defs>
-
-              <g filter="url(#f1)">
-                <polygon points="0,0 100,0 50,100" fill="url(#gradient1)" />
-                <polygon points="100,0 200,0 150,100" fill="url(#gradient1)" />
-                <polygon points="50,100 150,100 100,200" fill="url(#gradient1)" />
-              </g>
-            </svg>
-         
-          
-           
-   </div>
-   </Link>  
-   <Link  href="/" >
-        <div className="brand-name">
-              <img src="/logo/OctaVertex.svg" alt="OctaVertex" className="octavertex" />
-              <img src="/logo/Media.svg" alt="Media" className="media" />
-            </div>
-       </Link>
-      </motion.div>
-
-
-       {/* Hamburger Menu Button */}
-       <button className='menu-button' onClick={toggleMenu}>
-        <svg width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-{/* Navigation Links */}
-<motion.ul
-        className={`nav-links ${isMenuOpen ? 'open' : ''}`}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={closeMenu}>
-          <Link href="/">Home</Link>
-        </motion.li>
-        <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={closeMenu}>
-          <Link href="/portfolio">Portfolio</Link>
-        </motion.li>
-        <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={closeMenu}>
-          <Link href="/#services">Services</Link>
-        </motion.li>
-        <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={closeMenu}>
-          <Link href="/about">About</Link>
-        </motion.li>
-        <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} onClick={closeMenu}>
-          <Link href="/#contact">Contact</Link>
-        </motion.li>
-      </motion.ul>
-    </nav>
+          {/* Documentation Link */}
+          <NavigationMenuItem>
+            <Link href="/docs" className="focus:outline-none hover:underline text-white">
+              Documentation
+            </Link>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
   );
-};
+}
 
-export default Navbar;
+
+
+
+const ListItem = React.forwardRef<HTMLAnchorElement, { href: string; title: string;   icon?: React.ComponentType<{ className?: string }>; children: React.ReactNode }>(
+  ({ href, title, icon: Icon, children, ...props }, ref) => (
+    <li>
+      <Link href={href} passHref>
+        <motion.a
+          ref={ref}
+          className="block select-none space-y-1 rounded-md p-3 leading-none"
+          initial={{ scale: 0.95 }}
+          whileHover={{ scale: 1 }}
+          transition={{ type: "spring", stiffness: 400, damping: 15 }}
+          {...props}
+        >
+          <div className="flex items-center space-x-2">
+            {Icon && <Icon className="h-4 w-4 text-neutral-500 dark:text-white" />} {/* Render the icon component */}
+         
+            <div className="text-sm font-medium">{title}</div>
+          </div>
+          <p>{children}</p>
+        </motion.a>
+      </Link>
+    </li>
+  )
+);
+
+ListItem.displayName = "ListItem";
