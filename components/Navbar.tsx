@@ -61,8 +61,7 @@ const components = [
 
 export default function Navbar() {
   return (
-    // <div className="flex justify-center bg-gray-900 text-white py-4">
-    //      <Icons/>
+
     <div className="flex flex-row flex-nowrap justify-evenly items-center content-stretch py-4 bg-gray-900 text-white">
         <Icons/>
       <NavigationMenu>
