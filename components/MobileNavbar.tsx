@@ -13,7 +13,6 @@
 //   icon?: LucideIcon;  // Changed to LucideIcon type
 // }
 
-
 // const MobileNavbar = () => {
 //   const [isOpen, setIsOpen] = useState(false);
 //   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
@@ -139,51 +138,51 @@
 
 //   const menuItems = {
 //     "Getting Started": [
-//       { 
-//         title: "Introduction", 
-//         href: "/docs", 
+//       {
+//         title: "Introduction",
+//         href: "/docs",
 //         description: "Re-usable components built using Radix UI and Tailwind CSS.",
 //       },
-//       { 
-//         title: "Installation", 
-//         href: "/docs/installation", 
+//       {
+//         title: "Installation",
+//         href: "/docs/installation",
 //         description: "How to install dependencies and structure your app.",
 //       },
-//       { 
-//         title: "Typography", 
-//         href: "/docs/primitives/typography", 
+//       {
+//         title: "Typography",
+//         href: "/docs/primitives/typography",
 //         description: "Styles for headings, paragraphs, lists, etc.",
 //       },
 //     ] as MenuItem[],
-    
+
 //     "Components": [
-//       { 
-//         title: "Alert Dialog", 
-//         href: "/docs/primitives/alert-dialog", 
+//       {
+//         title: "Alert Dialog",
+//         href: "/docs/primitives/alert-dialog",
 //         icon: AlertTriangle,
 //         description: "A modal dialog that interrupts the user.",
 //       },
-//       { 
-//         title: "Hover Card", 
-//         href: "/docs/primitives/hover-card", 
+//       {
+//         title: "Hover Card",
+//         href: "/docs/primitives/hover-card",
 //         icon: Eye,
 //         description: "For sighted users to preview content.",
 //       },
-//       { 
-//         title: "Progress", 
-//         href: "/docs/primitives/progress", 
+//       {
+//         title: "Progress",
+//         href: "/docs/primitives/progress",
 //         icon: Loader,
 //         description: "Displays task completion progress.",
 //       },
-//       { 
-//         title: "Tabs", 
-//         href: "/docs/primitives/tabs", 
+//       {
+//         title: "Tabs",
+//         href: "/docs/primitives/tabs",
 //         icon: Table,
 //         description: "Layered sections of content.",
 //       },
-//       { 
-//         title: "Tooltip", 
-//         href: "/docs/primitives/tooltip", 
+//       {
+//         title: "Tooltip",
+//         href: "/docs/primitives/tooltip",
 //         icon: HelpCircle,
 //         description: "Displays additional information.",
 //       },
@@ -269,14 +268,22 @@
 
 // export default MobileNavbar;
 
-
-
 "use client";
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Menu, X, ChevronRight, AlertTriangle, Eye, Loader, Table, HelpCircle, LucideIcon } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronRight,
+  AlertTriangle,
+  Eye,
+  Loader,
+  Table,
+  HelpCircle,
+  LucideIcon,
+} from "lucide-react";
 import Icons from "@/components/Icons";
 
 interface MenuItem {
@@ -288,17 +295,19 @@ interface MenuItem {
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<keyof typeof menuItems | null>(null);
+  const [activeSubmenu, setActiveSubmenu] = useState<
+    keyof typeof menuItems | null
+  >(null);
 
   // Lock body scroll when menu is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
@@ -310,51 +319,52 @@ const MobileNavbar = () => {
 
   const menuItems = {
     "Getting Started": [
-      { 
-        title: "Introduction", 
-        href: "/docs", 
-        description: "Re-usable components built using Radix UI and Tailwind CSS.",
+      {
+        title: "Introduction",
+        href: "/docs",
+        description:
+          "Re-usable components built using Radix UI and Tailwind CSS.",
       },
-      { 
-        title: "Installation", 
-        href: "/docs/installation", 
+      {
+        title: "Installation",
+        href: "/docs/installation",
         description: "How to install dependencies and structure your app.",
       },
-      { 
-        title: "Typography", 
-        href: "/docs/primitives/typography", 
+      {
+        title: "Typography",
+        href: "/docs/primitives/typography",
         description: "Styles for headings, paragraphs, lists, etc.",
       },
     ] as MenuItem[],
-    
-    "Components": [
-      { 
-        title: "Alert Dialog", 
-        href: "/docs/primitives/alert-dialog", 
+
+    Components: [
+      {
+        title: "Alert Dialog",
+        href: "/docs/primitives/alert-dialog",
         icon: AlertTriangle,
         description: "A modal dialog that interrupts the user.",
       },
-      { 
-        title: "Hover Card", 
-        href: "/docs/primitives/hover-card", 
+      {
+        title: "Hover Card",
+        href: "/docs/primitives/hover-card",
         icon: Eye,
         description: "For sighted users to preview content.",
       },
-      { 
-        title: "Progress", 
-        href: "/docs/primitives/progress", 
+      {
+        title: "Progress",
+        href: "/docs/primitives/progress",
         icon: Loader,
         description: "Displays task completion progress.",
       },
-      { 
-        title: "Tabs", 
-        href: "/docs/primitives/tabs", 
+      {
+        title: "Tabs",
+        href: "/docs/primitives/tabs",
         icon: Table,
         description: "Layered sections of content.",
       },
-      { 
-        title: "Tooltip", 
-        href: "/docs/primitives/tooltip", 
+      {
+        title: "Tooltip",
+        href: "/docs/primitives/tooltip",
         icon: HelpCircle,
         description: "Displays additional information.",
       },
@@ -364,15 +374,21 @@ const MobileNavbar = () => {
   return (
     <div className="lg:hidden relative">
       {/* Navbar Header */}
-      <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
-        ${isOpen ? 'bg-transparent' : 'bg-[rgb(16,24,40)]'}`}>
+      <div
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        ${isOpen ? "bg-transparent" : "bg-[rgb(16,24,40)]"}`}
+      >
         <div className="flex justify-between items-center px-4 py-3">
           <Icons />
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-2 hover:bg-gray-700/50 rounded-lg transition-colors"
           >
-            {isOpen ? <X size={24} className="text-white" /> : <Menu size={24} className="text-white" />}
+            {isOpen ? (
+              <X size={24} className="text-white" />
+            ) : (
+              <Menu size={24} className="text-white" />
+            )}
           </button>
         </div>
       </div>
@@ -410,7 +426,9 @@ const MobileNavbar = () => {
               <div className="h-full overflow-y-auto pt-16 pb-6">
                 {!activeSubmenu && (
                   <div className="px-4 py-2">
-                    {(Object.keys(menuItems) as Array<keyof typeof menuItems>).map((section) => (
+                    {(
+                      Object.keys(menuItems) as Array<keyof typeof menuItems>
+                    ).map((section) => (
                       <motion.button
                         key={section}
                         onClick={() => setActiveSubmenu(section)}
@@ -423,12 +441,14 @@ const MobileNavbar = () => {
                       </motion.button>
                     ))}
                     <Link href="/docs">
-                      <motion.div 
+                      <motion.div
                         className="p-4 text-white hover:bg-white/10 rounded-lg mb-2 transition-colors"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        <span className="text-lg font-medium">Documentation</span>
+                        <span className="text-lg font-medium">
+                          Documentation
+                        </span>
                       </motion.div>
                     </Link>
                   </div>
@@ -453,23 +473,25 @@ const MobileNavbar = () => {
 
                     {menuItems[activeSubmenu].map((item) => (
                       <Link key={item.title} href={item.href}>
-                        <motion.div 
+                        <motion.div
                           className="p-4 text-white hover:bg-white/10 rounded-lg mb-2 group transition-colors"
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >
                           <div className="flex items-center mb-2">
                             {item.icon && (
-                              <item.icon 
-                                className="mr-2 group-hover:text-blue-400 transition-colors" 
-                                size={20} 
+                              <item.icon
+                                className="mr-2 group-hover:text-blue-400 transition-colors"
+                                size={20}
                               />
                             )}
                             <span className="font-medium group-hover:text-blue-400 transition-colors">
                               {item.title}
                             </span>
                           </div>
-                          <p className="text-sm text-gray-400">{item.description}</p>
+                          <p className="text-sm text-gray-400">
+                            {item.description}
+                          </p>
                         </motion.div>
                       </Link>
                     ))}

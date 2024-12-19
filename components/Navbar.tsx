@@ -1,7 +1,13 @@
 "use client";
 
 import React from "react";
-import { IconAlertTriangle, IconEye, IconLoader, IconTable, IconTooltip } from "@tabler/icons-react";
+import {
+  IconAlertTriangle,
+  IconEye,
+  IconLoader,
+  IconTable,
+  IconTooltip,
+} from "@tabler/icons-react";
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -14,7 +20,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Icons from "@/components/Icons";
-
 
 // Define types for ListItem props
 interface ListItemProps {
@@ -30,13 +35,15 @@ const components = [
   {
     title: "Alert Dialog",
     href: "/docs/primitives/alert-dialog",
-    description: "A modal dialog that interrupts the user with important content and expects a response.",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
     icon: IconAlertTriangle, // Pass the component, not JSX element
   },
   {
     title: "Hover Card",
     href: "/docs/primitives/hover-card",
-    description: "For sighted users to preview content available behind a link.",
+    description:
+      "For sighted users to preview content available behind a link.",
     icon: IconEye,
   },
   {
@@ -61,9 +68,8 @@ const components = [
 
 export default function Navbar() {
   return (
-
     <div className="flex flex-row flex-nowrap justify-evenly items-center content-stretch py-4 bg-gray-900 text-white">
-        <Icons/>
+      <Icons />
       <NavigationMenu>
         <NavigationMenuList className="flex items-center space-x-6">
           {/* Getting Started Menu */}
@@ -76,10 +82,16 @@ export default function Navbar() {
                     href="/"
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-gray-700/50 to-gray-800 p-6 no-underline outline-none focus:shadow-md"
                   >
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                      <div className="mb-2 mt-4 text-lg font-medium">shadcn/ui</div>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                    >
+                      <div className="mb-2 mt-4 text-lg font-medium">
+                        shadcn/ui
+                      </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        Beautifully designed components built with Radix UI and Tailwind CSS.
+                        Beautifully designed components built with Radix UI and
+                        Tailwind CSS.
                       </p>
                     </motion.div>
                   </Link>
@@ -118,7 +130,10 @@ export default function Navbar() {
 
           {/* Documentation Link */}
           <NavigationMenuItem>
-            <Link href="/docs" className="focus:outline-none hover:underline text-white">
+            <Link
+              href="/docs"
+              className="focus:outline-none hover:underline text-white"
+            >
               Documentation
             </Link>
           </NavigationMenuItem>
@@ -128,31 +143,36 @@ export default function Navbar() {
   );
 }
 
-
-
-
-const ListItem = React.forwardRef<HTMLAnchorElement, { href: string; title: string;   icon?: React.ComponentType<{ className?: string }>; children: React.ReactNode }>(
-  ({ href, title, icon: Icon, children, ...props }, ref) => (
-    <li>
-      <Link href={href} passHref>
-        <motion.a
-          ref={ref}
-          className="block select-none space-y-1 rounded-md p-3 leading-none"
-          initial={{ scale: 0.95 }}
-          whileHover={{ scale: 1 }}
-          transition={{ type: "spring", stiffness: 400, damping: 15 }}
-          {...props}
-        >
-          <div className="flex items-center space-x-2">
-            {Icon && <Icon className="h-4 w-4 text-neutral-500 dark:text-white" />} {/* Render the icon component */}
-         
-            <div className="text-sm font-medium">{title}</div>
-          </div>
-          <p>{children}</p>
-        </motion.a>
-      </Link>
-    </li>
-  )
-);
+const ListItem = React.forwardRef<
+  HTMLAnchorElement,
+  {
+    href: string;
+    title: string;
+    icon?: React.ComponentType<{ className?: string }>;
+    children: React.ReactNode;
+  }
+>(({ href, title, icon: Icon, children, ...props }, ref) => (
+  <li>
+    <Link href={href} passHref>
+      <motion.a
+        ref={ref}
+        className="block select-none space-y-1 rounded-md p-3 leading-none"
+        initial={{ scale: 0.95 }}
+        whileHover={{ scale: 1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 15 }}
+        {...props}
+      >
+        <div className="flex items-center space-x-2">
+          {Icon && (
+            <Icon className="h-4 w-4 text-neutral-500 dark:text-white" />
+          )}{" "}
+          {/* Render the icon component */}
+          <div className="text-sm font-medium">{title}</div>
+        </div>
+        <p>{children}</p>
+      </motion.a>
+    </Link>
+  </li>
+));
 
 ListItem.displayName = "ListItem";
