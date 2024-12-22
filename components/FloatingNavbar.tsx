@@ -29,7 +29,7 @@ export default function FloatingNavbar() {
     },
     {
       name: "Contact",
-      link: "/contact",
+      link: "/contact-us",
       icon: (
         <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
