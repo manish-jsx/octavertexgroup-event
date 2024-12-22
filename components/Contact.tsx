@@ -66,24 +66,24 @@ const ContactForm = () => {
   const formRef = useRef<HTMLDivElement>(null);
   const contactInfoRef = useRef<HTMLDivElement>(null);
   const benefitsRef = useRef<HTMLDivElement>(null);
-  
+
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
-    
+
     // Animate benefits section
     tl.fromTo(benefitsRef.current?.children || [],
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 }
     );
-    
+
     // Animate form
     tl.fromTo(formRef.current,
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 0.8 },
       "-=0.4"
     );
-    
+
     // Animate contact info
     tl.fromTo(contactInfoRef.current,
       { opacity: 0, x: 30 },
@@ -110,59 +110,59 @@ const ContactForm = () => {
   return (
     <section className="relative py-20 overflow-hidden min-h-screen flex items-center" id="contact">
       <BackgroundBeams />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
- {/* Benefits Section */}
-<div 
-  ref={benefitsRef} 
-  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 px-4"
->
-  {benefits.map((benefit, index) => (
-    <div
-      key={index}
-      className="benefit-item group relative overflow-hidden p-6 rounded-2xl
+          {/* Benefits Section */}
+          <div
+            ref={benefitsRef}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 px-4"
+          >
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="benefit-item group relative overflow-hidden p-6 rounded-2xl
         bg-gradient-to-b from-[rgba(121,205,255,0.08)] to-[rgba(121,205,255,0.03)]
         border border-[rgba(121,205,255,0.12)] hover:border-[rgba(121,205,255,0.2)]
         transition-all duration-300 hover:transform hover:-translate-y-1
         hover:shadow-[0_8px_20px_-6px_rgba(121,205,255,0.12)]"
-    >
-      {/* Icon container */}
-      <div className="mb-4 p-3.5 rounded-xl inline-flex
+              >
+                {/* Icon container */}
+                <div className="mb-4 p-3.5 rounded-xl inline-flex
         bg-[rgba(121,205,255,0.1)] text-[rgb(121,205,255)]
         group-hover:scale-110 group-hover:rotate-3 transform
         transition-all duration-300 ease-out"
-      >
-        {/* Make icons slightly larger */}
-        <div className="w-7 h-7">
-          {benefit.icon}
-        </div>
-      </div>
+                >
+                  {/* Make icons slightly larger */}
+                  <div className="w-7 h-7">
+                    {benefit.icon}
+                  </div>
+                </div>
 
-      {/* Text with enhanced typography */}
-      <h3 className="font-semibold text-lg mb-2.5
+                {/* Text with enhanced typography */}
+                <h3 className="font-semibold text-lg mb-2.5
         text-[rgb(199,210,254)] group-hover:text-[rgb(121,205,255)]
         transition-colors duration-300 tracking-tight"
-      >
-        {benefit.text}
-      </h3>
-      
-      <p className="text-[15px] leading-relaxed
+                >
+                  {benefit.text}
+                </h3>
+
+                <p className="text-[15px] leading-relaxed
         text-[rgb(199,210,254)]/75 font-normal
         group-hover:text-[rgb(199,210,254)]/90
         transition-colors duration-300"
-      >
-        Get expert guidance and insights before starting your development journey
-      </p>
+                >
+                  Get expert guidance and insights before starting your development journey
+                </p>
 
-      {/* Animated gradient line on hover */}
-      <div className="absolute bottom-0 left-0 w-0 h-[2px]
+                {/* Animated gradient line on hover */}
+                <div className="absolute bottom-0 left-0 w-0 h-[2px]
         bg-gradient-to-r from-[rgb(121,205,255)] to-[rgb(139,92,246)]
         group-hover:w-full transition-all duration-500 ease-out"
-      />
-    </div>
-  ))}
-</div>
+                />
+              </div>
+            ))}
+          </div>
 
           <Card className="border-[rgb(121,205,255)]/20 bg-[rgb(15,24,41)]/90 backdrop-blur-xl">
             <CardHeader className="text-center space-y-4">
@@ -174,7 +174,7 @@ const ContactForm = () => {
                   Transform your ideas into reality with OctaVertex Media. Our expert team is ready to bring your vision to life with cutting-edge technology solutions.
                 </CardDescription>
               </div>
-              
+
               <div className="flex items-center justify-center gap-4 py-4">
                 <AnimatedTooltip items={teamMembers} />
               </div>
@@ -198,21 +198,21 @@ const ContactForm = () => {
                         required
                       />
                     </div>
-                    
+
                     <Input
                       type="email"
                       placeholder="Work Email"
                       className="bg-[rgb(15,24,41)]/50 border-[rgb(121,205,255)]/20 text-white placeholder:text-[rgb(199,210,254)]/50"
                       required
                     />
-                    
+
                     <div className="grid grid-cols-2 gap-4">
                       <Input
                         type="tel"
                         placeholder="Phone Number"
                         className="bg-[rgb(15,24,41)]/50 border-[rgb(121,205,255)]/20 text-white placeholder:text-[rgb(199,210,254)]/50"
                       />
-                      <select 
+                      <select
                         className="w-full p-2 rounded-md bg-[rgb(15,24,41)]/50 border border-[rgb(121,205,255)]/20 text-[rgb(199,210,254)] focus:ring-2 focus:ring-[rgb(121,205,255)]/50"
                         required
                       >
@@ -231,8 +231,8 @@ const ContactForm = () => {
                       required
                     />
 
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       className="w-full bg-gradient-to-r from-[rgb(121,205,255)] to-[rgb(139,92,246)] hover:from-[rgb(121,205,255)]/90 hover:to-[rgb(139,92,246)]/90 text-white font-medium py-6"
                       disabled={isSubmitting}
                     >
@@ -285,7 +285,7 @@ const ContactForm = () => {
                       <MapPin className="h-5 w-5 text-[rgb(121,205,255)]" />
                       <div>
                         <h3 className="font-medium text-[rgb(199,210,254)]">Location</h3>
-                        <p className="text-[rgb(199,210,254)]/70">Bhubaneswar, Odisha, India</p>
+                        <p className="text-[rgb(199,210,254)]/70">Saket, New Delhi, India</p>
                       </div>
                     </div>
 
@@ -293,8 +293,8 @@ const ContactForm = () => {
                       <Mail className="h-5 w-5 text-[rgb(121,205,255)]" />
                       <div>
                         <h3 className="font-medium text-[rgb(199,210,254)]">Email</h3>
-                        <a href="mailto:hello@octavertexmedia.com" className="text-[rgb(121,205,255)] hover:text-[rgb(121,205,255)]/80">
-                          hello@octavertexmedia.com
+                        <a href="mailto:admin@octavertexmedia.com" className="text-[rgb(121,205,255)] hover:text-[rgb(121,205,255)]/80">
+                          admin@octavertexmedia.com
                         </a>
                       </div>
                     </div>
@@ -303,7 +303,7 @@ const ContactForm = () => {
                       <Phone className="h-5 w-5 text-[rgb(121,205,255)]" />
                       <div>
                         <h3 className="font-medium text-[rgb(199,210,254)]">Phone</h3>
-                        <p className="text-[rgb(199,210,254)]/70">+91 93373 55536</p>
+                        <p className="text-[rgb(199,210,254)]/70">+91 7004456733</p>
                       </div>
                     </div>
                   </div>
@@ -312,7 +312,7 @@ const ContactForm = () => {
                     <h3 className="font-medium mb-4 text-[rgb(199,210,254)]">Connect With Us</h3>
                     <div className="flex gap-4">
                       {[
-                        { icon: <Linkedin className="h-5 w-5" />, link: "https://linkedin.com/company/octavertexmedia" },
+                        { icon: <Linkedin className="h-5 w-5" />, link: "https://www.linkedin.com/company/octavertex-media/" },
                         { icon: <Github className="h-5 w-5" />, link: "https://github.com/octavertexmedia" },
                         { icon: <Instagram className="h-5 w-5" />, link: "https://instagram.com/octavertexmedia" },
                         { icon: <Twitter className="h-5 w-5" />, link: "https://x.com/octavertexmedia" }
