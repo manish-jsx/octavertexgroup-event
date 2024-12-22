@@ -57,17 +57,17 @@ const contactInfo: ContactInfo[] = [
   {
     icon: Mail,
     title: 'Email Us',
-    details: ['hello@octavertex.com', 'support@octavertex.com'],
+    details: ['admin@octavertexmedia.com', 'manish@octavertexmedia.com'],
   },
   {
     icon: Phone,
     title: 'Call Us',
-    details: ['+1 (555) 123-4567', '+1 (555) 765-4321'],
+    details: ['+91 700 445 6733'],
   },
   {
     icon: MapPin,
     title: 'Visit Us',
-    details: ['123 Innovation Drive', 'Silicon Valley, CA 94025'],
+    details: ['123 Saket', 'New Delhi, India, 110017'],
   },
   {
     icon: Clock,
