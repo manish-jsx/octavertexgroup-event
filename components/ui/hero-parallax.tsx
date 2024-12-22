@@ -214,10 +214,10 @@ const Header = () => {
 
           <div className="h-px w-full max-w-2xl bg-gradient-to-r from-transparent via-[#6344F5]/20 to-transparent my-8" />
 
-          <p className="max-w-2xl text-base md:text-xl mb-12 text-[rgb(199,210,254)]/80">
+          {/* <p className="max-w-2xl text-base md:text-xl mb-12 text-[rgb(199,210,254)]/80">
             Ready to revolutionize your business with AI-powered solutions and
             immersive experiences? Let's embark on a journey to the future of technology.
-          </p>
+          </p> */}
 
           <div className="flex flex-wrap gap-4">
   <Link
