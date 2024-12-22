@@ -440,14 +440,14 @@ const MobileNavbar = () => {
                         <ChevronRight size={20} />
                       </motion.button>
                     ))}
-                    <Link href="/docs">
+                    <Link href="/contact-us">
                       <motion.div
                         className="p-4 text-white hover:bg-white/10 rounded-lg mb-2 transition-colors"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
                         <span className="text-lg font-medium">
-                          Documentation
+                          Get in Touch
                         </span>
                       </motion.div>
                     </Link>

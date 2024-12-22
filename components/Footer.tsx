@@ -84,15 +84,15 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="#contact"
+                href="/contact-us"
                 className="hover:text-gray-300 transition-colors"
               >
                 Contact Us
               </Link>
             </li>
-            <li>
+            {/* <li>
               <ModeToggle />
-            </li>
+            </li> */}
           </ul>
         </nav>
 

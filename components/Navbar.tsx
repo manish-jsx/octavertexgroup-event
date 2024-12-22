@@ -131,10 +131,10 @@ export default function Navbar() {
           {/* Documentation Link */}
           <NavigationMenuItem>
             <Link
-              href="/docs"
+              href="/contact-us"
               className="focus:outline-none hover:underline text-white"
             >
-              Documentation
+              Get in Touch
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
