@@ -2,12 +2,13 @@
 
 import React from "react";
 import {
-  IconAlertTriangle,
-  IconEye,
-  IconLoader,
-  IconTable,
-  IconTooltip,
+  IconFolder,
+  IconCode,
+  IconChartBar,
+  IconBriefcase,
+  IconMessageChatbot,
 } from "@tabler/icons-react";
+
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -33,36 +34,34 @@ interface ListItemProps {
 
 const components = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-    icon: IconAlertTriangle, // Pass the component, not JSX element
+    title: "Web Development",
+    href: "/web-development",
+    description: "Full-stack web development services.",
+    icon: IconCode,
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-    icon: IconEye,
+    title: "Mobile App Development",
+    href: "/mobile-development",
+    description: "Native iOS and Android app development.",
+    icon: IconFolder,
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description: "Displays an indicator showing task completion progress.",
-    icon: IconLoader,
+    title: "API Development",
+    href: "/api-development",
+    description: "Custom API solutions for your needs.",
+    icon: IconChartBar,
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description: "Layered sections of content displayed one at a time.",
-    icon: IconTable,
+    title: "UI/UX Design",
+    href: "/ui-ux-design",
+    description: "User-centered design and prototyping.",
+    icon: IconBriefcase,
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description: "Displays info when hovering over an element.",
-    icon: IconTooltip,
+    title: "Project Management",
+    href: "/project-management",
+    description: "Streamlined project management services.",
+    icon: IconMessageChatbot,
   },
 ];
 
@@ -96,13 +95,13 @@ export default function Navbar() {
                     </motion.div>
                   </Link>
                 </li>
-                <ListItem href="/docs" title="Introduction">
+                <ListItem href="/about" title="About">
                   Re-usable components built using Radix UI and Tailwind CSS.
                 </ListItem>
-                <ListItem href="/docs/installation" title="Installation">
+                <ListItem href="/case-studies" title="Case Studies">
                   How to install dependencies and structure your app.
                 </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Typography">
+                <ListItem href="/portfolio" title="Portfolio">
                   Styles for headings, paragraphs, lists, etc.
                 </ListItem>
               </ul>
