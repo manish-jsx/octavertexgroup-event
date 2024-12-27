@@ -1,1 +1,87 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"><url><loc>https://www.octavertexmedia.com/</loc><changefreq>daily</changefreq><priority>0.7</priority></url><url><loc>https://www.octavertexmedia.com/about</loc><changefreq>daily</changefreq><priority>0.7</priority></url><url><loc>https://www.octavertexmedia.com/contact-us</loc><changefreq>daily</changefreq><priority>0.7</priority></url><url><loc>https://www.octavertexmedia.com/portfolio</loc><changefreq>daily</changefreq><priority>0.7</priority></url><url><loc>https://www.octavertexmedia.com/privacy-policy</loc><changefreq>daily</changefreq><priority>0.7</priority></url><url><loc>https://www.octavertexmedia.com/registration</loc><changefreq>daily</changefreq><priority>0.7</priority></url><url><loc>https://www.octavertexmedia.com/terms-of-service</loc><changefreq>daily</changefreq><priority>0.7</priority></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.octavertexmedia.com/</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/contact-us</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/portfolio</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/privacy-policy</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/terms-of-service</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/case-studies/tech-corp</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/case-studies/fashion-forward</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/case-studies/global-logistics</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/case-studies/nextgen-bank</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/case-studies/smart-city</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/case-studies/edutech</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/case-studies/metropolitan-council</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/case-studies/healthcare-ai</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/case-studies/edutech-solutions</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://www.octavertexmedia.com/case-studies/green-energy</loc>
+  <lastmod>2024-12-27T06:25:19+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
