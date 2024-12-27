@@ -55,8 +55,26 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Your App Name',
-  description: 'Your app description',
+  title: 'OctaVertex Media | Digital Marketing, Web Development & Branding Agency',
+  description:
+    'OctaVertex Media is a top-rated agency in New Delhi, India, offering expert digital marketing, software, and web application development services. We craft innovative branding strategies and impactful digital experiences that help businesses thrive. Our tailored solutions include website design, SEO, content marketing, and branding to elevate your online presence and drive business growth. Partner with OctaVertex Media for creative, data-driven strategies that deliver measurable results.',
+  keywords: [
+    'OctaVertex Media',
+    'digital marketing agency in India',
+    'web application development',
+    'branding agency in New Delhi',
+    'SEO services',
+    'content marketing',
+    'website design',
+    'business growth solutions',
+    'innovative digital strategies',
+  ],
+  author: 'OctaVertex Media',
+  ogTitle: 'OctaVertex Media | Elevate Your Brand with Expert Marketing & Development',
+  ogDescription:
+    'Discover OctaVertex Media, the premier agency for digital marketing, web development, and branding. Drive growth with innovative solutions tailored to your business.',
+  ogImage: '/logo/og-image-light.png', // Path to your Open Graph image
+  ogUrl: 'https://octavertexmedia.com',
 };
 
 export default function RootLayout({
