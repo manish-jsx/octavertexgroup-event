@@ -172,7 +172,87 @@ export default function RootLayout({
               'ad_user_data': 'denied',
               'ad_personalization': 'denied',
               'analytics_storage': 'denied',
-              'regions': ['IN'] 
+              'regions': [
+    // Europe
+    'AT', // Austria
+    'BE', // Belgium
+    'BG', // Bulgaria
+    'HR', // Croatia
+    'CY', // Cyprus
+    'CZ', // Czech Republic
+    'DK', // Denmark
+    'EE', // Estonia
+    'FI', // Finland
+    'FR', // France
+    'DE', // Germany
+    'GR', // Greece
+    'HU', // Hungary
+    'IE', // Ireland
+    'IT', // Italy
+    'LV', // Latvia
+    'LT', // Lithuania
+    'LU', // Luxembourg
+    'MT', // Malta
+    'NL', // Netherlands
+    'PL', // Poland
+    'PT', // Portugal
+    'RO', // Romania
+    'SK', // Slovakia
+    'SI', // Slovenia
+    'ES', // Spain
+    'SE', // Sweden
+    
+    // North America
+    'US', // United States
+    'CA', // Canada
+    'MX', // Mexico
+    
+    // South America
+    'AR', // Argentina
+    'BR', // Brazil
+    'CL', // Chile
+    'CO', // Colombia
+    'PE', // Peru
+    'UY', // Uruguay
+    'VE', // Venezuela
+    
+    // Asia
+    'CN', // China
+    'HK', // Hong Kong
+    'IN', // India
+    'ID', // Indonesia
+    'JP', // Japan
+    'KR', // South Korea
+    'MY', // Malaysia
+    'PH', // Philippines
+    'SG', // Singapore
+    'TW', // Taiwan
+    'TH', // Thailand
+    'VN', // Vietnam
+    
+    // Oceania
+    'AU', // Australia
+    'NZ', // New Zealand
+    
+    // Middle East
+    'IL', // Israel
+    'SA', // Saudi Arabia
+    'AE', // United Arab Emirates
+    'TR', // Turkey
+    
+    // Africa
+    'EG', // Egypt
+    'KE', // Kenya
+    'NG', // Nigeria
+    'ZA', // South Africa
+    
+    // Other significant regions
+    'GB', // United Kingdom
+    'CH', // Switzerland
+    'NO', // Norway
+    'RU', // Russia
+    'UA'  // Ukraine
+  ]
             });
 
             // Set default consent for all other regions
