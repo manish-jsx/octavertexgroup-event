@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ModeToggle } from "@/components/ThemeButton";
 
 const Footer = () => {
   return (
@@ -90,9 +89,7 @@ const Footer = () => {
                 Contact Us
               </Link>
             </li>
-            {/* <li>
-              <ModeToggle />
-            </li> */}
+         
           </ul>
         </nav>
 
@@ -112,6 +109,13 @@ const Footer = () => {
               className="hover:text-gray-300 transition-colors"
             >
               Terms of Service
+            </Link>
+            <span>|</span>
+            <Link
+              href="/cookie-policy"
+              className="hover:text-gray-300 transition-colors"
+            >
+              Cookie Policy
             </Link>
           </div>
         </div>

@@ -1,83 +1,152 @@
-
-import { Metadata } from 'next';
-import React from 'react';
+import { Metadata } from 'next'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description: 'Learn about how Octavertex Media protects your data.',
-};
-
-export async function generateStaticParams() {
-  return [{ params: {} }];
+  title: 'Privacy Policy | OctaVertex Media',
+  description: 'Learn about how OctaVertex Media protects your data.',
 }
 
-const PrivacyPolicy: React.FC = () => {
+export default function PrivacyPolicy() {
   return (
-    <main className="container mx-auto py-12 px-4">
-      <h1 className="text-3xl font-bold mb-4">Privacy Policy </h1>
-      <div className="prose lg:prose-lg">
-        <p>
-          Effective Date: October 26, 2023
-        </p>
+    <main className="container mx-auto px-4 py-8 max-w-4xl">
+      <Card className="bg-white dark:bg-gray-800">
+        <CardHeader>
+          <CardTitle className="text-3xl font-bold text-center text-primary">Privacy Policy</CardTitle>
+          <CardDescription className="text-center text-muted-foreground">
+            <p>Last Updated On 28-Dec-2024</p>
+            <p>Effective Date 23-Nov-2023</p>
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <p className="text-muted-foreground">
+            This Privacy Policy describes the policies of OctaVertex Media, New Delhi, Delhi 110017, India,
+            email: admin@octavertexmedia.com, phone: +917004456733, on the collection, use, and disclosure
+            of your information that we collect when you use our website (octavertexmedia.com) (the "Service").
+            By accessing or using the Service, you are consenting to the collection, use, and disclosure of your
+            information in accordance with this Privacy Policy. If you do not consent to the same, please do not
+            access or use the Service.
+          </p>
 
-        <p>
-          At Octavertex Media, we value your privacy. This policy explains how we collect, use, and protect the personal information you share with us. By using our services, you consent to the practices described below.
-        </p>
+          <p className="text-muted-foreground">
+            We may modify this Privacy Policy at any time without any prior notice to you and will post the
+            revised Privacy Policy on the Service. The revised Policy will be effective 180 days from when the
+            revised Policy is posted in the Service, and your continued access or use of the Service after such
+            time will constitute your acceptance of the revised Privacy Policy. We therefore recommend that you
+            periodically review this page.
+          </p>
 
-        <h2>1. Information We Collect</h2>
+          <ol className="list-decimal list-inside space-y-6">
+            <li>
+              <h2 className="text-xl font-semibold text-primary mb-2">Information We Collect:</h2>
+              <p className="text-muted-foreground mb-2">We will collect and process the following personal information about you:</p>
+              <ul className="list-disc list-inside pl-4 text-muted-foreground">
+                <li>Name</li>
+                <li>Email</li>
+                <li>Mobile</li>
+              </ul>
+            </li>
 
-        <p>
-          We collect information in various ways, depending on your interaction with us. This includes information you provide directly, such as through contact forms, project inquiries, and feedback, as well as information automatically collected, including:
-        </p>
+            <Separator className="my-4" />
 
-        <ul>
-          <li><b>Contact Information:</b> Name, email address, phone number, company details, etc.</li>
-          <li><b>Project Details:</b>  Project specifications, budgets, deadlines.</li>
-          <li><b>Usage Data:</b> Website activity, page views, interaction with services.</li>
-          <li><b>Technical Data:</b> IP address, browser type, device information, referring/exit pages.</li>
-          <li><b>Cookies and Similar Technologies:</b> We use cookies to enhance your experience and personalize content. You can manage cookie settings through your browser.</li>
-          <li><b>Other Interactions:</b>  Information from support tickets, training registration, and any other communications.</li>
-        </ul>
+            <li>
+              <h2 className="text-xl font-semibold text-primary mb-2">How We Use Your Information:</h2>
+              <p className="text-muted-foreground mb-2">We will use the information that we collect about you for the following purposes:</p>
+              <ul className="list-disc list-inside pl-4 text-muted-foreground grid grid-cols-1 md:grid-cols-2 gap-2">
+                <li>Marketing/Promotional</li>
+                <li>Creating user account</li>
+                <li>Testimonials</li>
+                <li>Customer feedback collection</li>
+                <li>Enforce T&amp;C</li>
+                <li>Processing payment</li>
+                <li>Support</li>
+                <li>Administration info</li>
+                <li>Manage customer order</li>
+                <li>User-to-user comments</li>
+                <li>Dispute resolution</li>
+                <li>Manage user account</li>
+              </ul>
+            </li>
 
-        <h2>2. How We Use Your Information</h2>
+            <Separator className="my-4" />
 
-        <p>
-          We use the collected information to:
-        </p>
+            <li>
+              <h2 className="text-xl font-semibold text-primary mb-2">How We Share Your Information:</h2>
+              <p className="text-muted-foreground mb-2">
+                We will not transfer your personal information to any third party without seeking your consent,
+                except in limited circumstances as described below:
+              </p>
+              <ul className="list-disc list-inside pl-4 text-muted-foreground">
+                <li>Analytics</li>
+              </ul>
+              <p className="text-muted-foreground mt-2">
+                We require such third parties to use the personal information we transfer to them only for the
+                purpose for which it was transferred and not to retain it for longer than is required for fulfilling
+                the said purpose.
+              </p>
+            </li>
 
-        <ul>
-          <li>Provide and improve our services.</li>
-          <li>Communicate with you regarding your projects, requests, and updates.</li>
-          <li>Improve the quality and performance of our services based on your feedback.</li>
-          <li>Comply with legal and regulatory requirements.</li>
-          <li>Protect our systems and data.</li>
-          <li>Analyze trends and improve our products.</li>
-          <li>Send you marketing communications if you've opted in.</li>
-        </ul>
+            <Separator className="my-4" />
 
-        <h2>3. Sharing Your Information</h2>
+            <li>
+              <h2 className="text-xl font-semibold text-primary mb-2">Retention of Your Information:</h2>
+              <p className="text-muted-foreground">
+                We will retain your personal information with us for 90 days to 2 years after user accounts remain idle
+                or for as long as we need it to fulfill the purposes for which it was collected as detailed in this
+                Privacy Policy. We may need to retain certain information for longer periods for record-keeping or other
+                legitimate reasons.
+              </p>
+            </li>
 
-        <p>
-          We may share your information with trusted third-party service providers who assist us in providing services.
-        </p>
+            <Separator className="my-4" />
 
-        <h2>4. Data Security</h2>
-        <p>
-          We take reasonable precautions to protect your personal information.
-        </p>
+            <li>
+              <h2 className="text-xl font-semibold text-primary mb-2">Your Rights:</h2>
+              <p className="text-muted-foreground">
+                Depending on the law that applies, you may have a right to access and rectify or erase your personal
+                data or receive a copy of your personal data, restrict or object to the active processing of your data,
+                and other rights. To exercise these rights, you can write to us at admin@octavertexmedia.com.
+              </p>
+            </li>
 
-        <h2>5. Your Rights</h2>
-        <p>
-          You have the right to access, update, and delete your personal information. Contact us for more information on how to exercise these rights.
-        </p>
+            <Separator className="my-4" />
 
-        <h2>6. Contact Us</h2>
-        <p>
-          For any inquiries about this policy, contact us at [Insert Contact Email Address].
-        </p>
-      </div>
+            <li>
+              <h2 className="text-xl font-semibold text-primary mb-2">Cookies, etc.</h2>
+              <p className="text-muted-foreground">
+                To learn more about how we use cookies and your choices, please refer to our{' '}
+                <a href="https://www.octavertexmedia.com/cookie-policy" className="text-blue-500 hover:underline">Cookie Policy</a>.
+              </p>
+            </li>
+
+            <Separator className="my-4" />
+
+            <li>
+              <h2 className="text-xl font-semibold text-primary mb-2">Security:</h2>
+              <p className="text-muted-foreground">
+                The security of your information is important to us, and we will use reasonable security measures to
+                prevent the loss, misuse, or unauthorized alteration of your information under our control.
+              </p>
+            </li>
+
+            <Separator className="my-4" />
+
+            <li>
+              <h2 className="text-xl font-semibold text-primary mb-2">Grievance/Data Protection Officer:</h2>
+              <p className="text-muted-foreground">
+                If you have any queries or concerns about the processing of your information, you may email our
+                Grievance Officer at admin@octavertexmedia.com. We will address your concerns in accordance with
+                applicable law.
+              </p>
+            </li>
+          </ol>
+
+          <Separator className="my-4" />
+
+      
+        </CardContent>
+      </Card>
     </main>
-  );
-};
+  )
+}
 
-export default PrivacyPolicy;
