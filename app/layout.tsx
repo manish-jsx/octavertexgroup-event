@@ -159,6 +159,32 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+
+                {/* Cookie Consent and GTM Data Layer Setup */}
+                <Script id="cookie-consent-setup" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+
+            // Set default consent for specific regions
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'analytics_storage': 'denied',
+              'regions': ['IN'] 
+            });
+
+            // Set default consent for all other regions
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'analytics_storage': 'denied'
+            });
+          `}
+        </Script>
+
         {/* Google Tag Manager */}
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
