@@ -72,8 +72,8 @@ export default function Navbar() {
       <NavigationMenu>
         <NavigationMenuList className="flex items-center space-x-6">
           {/* Getting Started Menu */}
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Explore</NavigationMenuTrigger>
+          <NavigationMenuItem >
+            <NavigationMenuTrigger className="bg-customDark text-white rounded-md">Explore</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-gray-800 text-white rounded-lg shadow-lg">
                 <li className="row-span-3">
@@ -108,8 +108,8 @@ export default function Navbar() {
           </NavigationMenuItem>
 
           {/* Components Menu */}
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+          <NavigationMenuItem >
+            <NavigationMenuTrigger className="bg-customDark text-white rounded-md">Services</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[450px] gap-3 p-4 md:grid-cols-2 bg-gray-800 text-white rounded-lg shadow-lg">
                 {components.map((component) => (
@@ -130,7 +130,7 @@ export default function Navbar() {
           <NavigationMenuItem>
             <Link
               href="/contact-us"
-              className="focus:outline-none hover:underline text-white"
+      className="focus:outline-none text-white hover:text-gray-300 hover:scale-105 transform transition duration-300 ease-in-out"
             >
               Get in Touch
             </Link>
