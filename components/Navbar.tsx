@@ -1,7 +1,14 @@
 "use client";
 
 import React from "react";
-import { IconAlertTriangle, IconEye, IconLoader, IconTable, IconTooltip } from "@tabler/icons-react";
+import {
+  IconFolder,
+  IconCode,
+  IconChartBar,
+  IconBriefcase,
+  IconMessageChatbot,
+} from "@tabler/icons-react";
+
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -15,7 +22,6 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Icons from "@/components/Icons";
 
-
 // Define types for ListItem props
 interface ListItemProps {
   href: string;
@@ -28,48 +34,46 @@ interface ListItemProps {
 
 const components = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description: "A modal dialog that interrupts the user with important content and expects a response.",
-    icon: IconAlertTriangle, // Pass the component, not JSX element
+    title: "Web Development",
+    href: "/web-development",
+    description: "Full-stack web development services.",
+    icon: IconCode,
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description: "For sighted users to preview content available behind a link.",
-    icon: IconEye,
+    title: "Mobile App Development",
+    href: "/mobile-development",
+    description: "Native iOS and Android app development.",
+    icon: IconFolder,
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description: "Displays an indicator showing task completion progress.",
-    icon: IconLoader,
+    title: "API Development",
+    href: "/api-development",
+    description: "Custom API solutions for your needs.",
+    icon: IconChartBar,
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description: "Layered sections of content displayed one at a time.",
-    icon: IconTable,
+    title: "UI/UX Design",
+    href: "/ui-ux-design",
+    description: "User-centered design and prototyping.",
+    icon: IconBriefcase,
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description: "Displays info when hovering over an element.",
-    icon: IconTooltip,
+    title: "Project Management",
+    href: "/project-management",
+    description: "Streamlined project management services.",
+    icon: IconMessageChatbot,
   },
 ];
 
 export default function Navbar() {
   return (
-    // <div className="flex justify-center bg-gray-900 text-white py-4">
-    //      <Icons/>
     <div className="flex flex-row flex-nowrap justify-evenly items-center content-stretch py-4 bg-gray-900 text-white">
-        <Icons/>
+      <Icons />
       <NavigationMenu>
         <NavigationMenuList className="flex items-center space-x-6">
           {/* Getting Started Menu */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Getting Started</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Explore</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-gray-800 text-white rounded-lg shadow-lg">
                 <li className="row-span-3">
@@ -77,22 +81,27 @@ export default function Navbar() {
                     href="/"
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-gray-700/50 to-gray-800 p-6 no-underline outline-none focus:shadow-md"
                   >
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                      <div className="mb-2 mt-4 text-lg font-medium">shadcn/ui</div>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                    >
+                      <div className="mb-2 mt-4 text-lg font-medium">
+                        Business ready solutions
+                      </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        Beautifully designed components built with Radix UI and Tailwind CSS.
+                        Kickstart your business with us.
                       </p>
                     </motion.div>
                   </Link>
                 </li>
-                <ListItem href="/docs" title="Introduction">
-                  Re-usable components built using Radix UI and Tailwind CSS.
+                <ListItem href="/about" title="About">
+                  Want to know what we do ?
                 </ListItem>
-                <ListItem href="/docs/installation" title="Installation">
-                  How to install dependencies and structure your app.
+                <ListItem href="/case-studies" title="Case Studies">
+                  Have a look on the projects and case studies we have completed
                 </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Typography">
-                  Styles for headings, paragraphs, lists, etc.
+                <ListItem href="/portfolio" title="Portfolio">
+                  Dive deep into our portfolio 
                 </ListItem>
               </ul>
             </NavigationMenuContent>
@@ -100,9 +109,9 @@ export default function Navbar() {
 
           {/* Components Menu */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-gray-800 text-white rounded-lg shadow-lg">
+              <ul className="grid w-[450px] gap-3 p-4 md:grid-cols-2 bg-gray-800 text-white rounded-lg shadow-lg">
                 {components.map((component) => (
                   <ListItem
                     key={component.title}
@@ -119,8 +128,11 @@ export default function Navbar() {
 
           {/* Documentation Link */}
           <NavigationMenuItem>
-            <Link href="/docs" className="focus:outline-none hover:underline text-white">
-              Documentation
+            <Link
+              href="/contact-us"
+              className="focus:outline-none hover:underline text-white"
+            >
+              Get in Touch
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
@@ -129,31 +141,36 @@ export default function Navbar() {
   );
 }
 
-
-
-
-const ListItem = React.forwardRef<HTMLAnchorElement, { href: string; title: string;   icon?: React.ComponentType<{ className?: string }>; children: React.ReactNode }>(
-  ({ href, title, icon: Icon, children, ...props }, ref) => (
-    <li>
-      <Link href={href} passHref>
-        <motion.a
-          ref={ref}
-          className="block select-none space-y-1 rounded-md p-3 leading-none"
-          initial={{ scale: 0.95 }}
-          whileHover={{ scale: 1 }}
-          transition={{ type: "spring", stiffness: 400, damping: 15 }}
-          {...props}
-        >
-          <div className="flex items-center space-x-2">
-            {Icon && <Icon className="h-4 w-4 text-neutral-500 dark:text-white" />} {/* Render the icon component */}
-         
-            <div className="text-sm font-medium">{title}</div>
-          </div>
-          <p>{children}</p>
-        </motion.a>
-      </Link>
-    </li>
-  )
-);
+const ListItem = React.forwardRef<
+  HTMLAnchorElement,
+  {
+    href: string;
+    title: string;
+    icon?: React.ComponentType<{ className?: string }>;
+    children: React.ReactNode;
+  }
+>(({ href, title, icon: Icon, children, ...props }, ref) => (
+  <li>
+    <Link href={href} passHref>
+      <motion.a
+        ref={ref}
+        className="block select-none space-y-1 rounded-md p-3 leading-none"
+        initial={{ scale: 0.95 }}
+        whileHover={{ scale: 1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 15 }}
+        {...props}
+      >
+        <div className="flex items-center space-x-2">
+          {Icon && (
+            <Icon className="h-4 w-4 text-neutral-500 dark:text-white" />
+          )}{" "}
+          {/* Render the icon component */}
+          <div className="text-sm font-medium">{title}</div>
+        </div>
+        <p>{children}</p>
+      </motion.a>
+    </Link>
+  </li>
+));
 
 ListItem.displayName = "ListItem";

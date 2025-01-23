@@ -113,6 +113,7 @@ import Footer from "@/components/Footer";
 import ResponsiveNavbar from "@/components/ResponsiveNavbar";
 import { ThemeProvider } from "@/components/theme-provider";
 
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",

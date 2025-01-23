@@ -16,10 +16,34 @@ export default function Services() {
   ));
 
   return (
-    <div className="w-full h-full py-20">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-        Get to know your iSad.
-      </h2>
+    <div className="w-full h-full py-20 bg-[rgb(15,24,41)]">
+     <h2 className="relative max-w-7xl pl-4 mx-auto group">
+  {/* Main heading with gradient text */}
+  <span className="text-xl md:text-5xl font-bold font-sans
+    bg-clip-text text-transparent 
+    bg-gradient-to-r from-[#18CCFC] via-[#6344F5] to-[#AE48FF]
+    tracking-tight leading-tight
+    block"
+  >
+    Services we are actively working on!
+  </span>
+
+  {/* Decorative underline */}
+  <div className="absolute -bottom-1 left-4 right-0 h-[2px] w-0 
+    bg-gradient-to-r from-[#18CCFC] via-[#6344F5] to-[#AE48FF]
+    group-hover:w-32 transition-all duration-300"
+  />
+  
+  {/* Glow effect */}
+  <div className="absolute -inset-2 bg-gradient-to-r from-[#18CCFC]/20 via-[#6344F5]/20 to-[#AE48FF]/20 
+    opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10"
+  />
+
+  {/* Optional: Decorative elements */}
+  <div className="absolute -left-2 top-1/2 -translate-y-1/2 w-1 h-12 
+    bg-gradient-to-b from-[#18CCFC] to-transparent opacity-50"
+  />
+</h2>
       <Carousel items={cards} />
     </div>
   );
