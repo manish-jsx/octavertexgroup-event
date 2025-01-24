@@ -26,7 +26,17 @@ import {
   ShoppingBag,
   Plane,
   Building, // Changed from Bank to Building
-  Server
+  Server,
+  BookOpen, // For resources
+  Timer, // For support
+  Settings, // For tools
+  Target, // For business solutions
+  FileCode, // For developer resources
+  Users, // For community
+  Headphones, // For support
+  BarChart2, // For analytics
+  Bot, // For AI solutions
+  Lock // For security
 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -46,6 +56,28 @@ const Footer = () => {
     "UI/UX Designer",
     "Project Manager",
     "Digital Marketing Specialist"
+  ];
+
+  const resources = [
+    { icon: <BookOpen size={16} />, text: "Documentation", link: "/docs" },
+    { icon: <FileCode size={16} />, text: "API Reference", link: "/api" },
+    { icon: <Users size={16} />, text: "Community Forum", link: "/community" },
+    { icon: <Timer size={16} />, text: "Status Page", link: "/status" },
+    { icon: <Settings size={16} />, text: "Developer Tools", link: "/tools" }
+  ];
+
+  const support = [
+    { icon: <Headphones size={16} />, text: "24/7 Support", link: "/support" },
+    { icon: <BookOpen size={16} />, text: "Knowledge Base", link: "/kb" },
+    { icon: <Timer size={16} />, text: "System Status", link: "/status" },
+    { icon: <Users size={16} />, text: "Community Support", link: "/community-support" }
+  ];
+
+  const additionalSolutions = [
+    { icon: <BarChart2 size={16} />, text: "Business Analytics" },
+    { icon: <Bot size={16} />, text: "AI Solutions" },
+    { icon: <Lock size={16} />, text: "Security Services" },
+    { icon: <Target size={16} />, text: "Digital Strategy" }
   ];
 
   return (
@@ -247,6 +279,73 @@ const Footer = () => {
                 </button>
               </div>
             </div>
+          </div>
+
+          {/* Add new Resources column */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[rgb(121,205,255)] to-[rgb(199,210,254)]">
+              Resources & Tools
+            </h3>
+            <div className="grid grid-cols-1 gap-3">
+              {resources.map((item, index) => (
+                <Link 
+                  key={index}
+                  href={item.link}
+                  className="flex items-center gap-2 text-[rgb(199,210,254)]/70 hover:text-[rgb(121,205,255)] group transition-colors"
+                >
+                  <span className="text-[rgb(121,205,255)] group-hover:scale-110 transition-transform">
+                    {item.icon}
+                  </span>
+                  {item.text}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Add new Support column */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[rgb(121,205,255)] to-[rgb(199,210,254)]">
+              Support & Help
+            </h3>
+            <div className="grid grid-cols-1 gap-3">
+              {support.map((item, index) => (
+                <Link 
+                  key={index}
+                  href={item.link}
+                  className="flex items-center gap-2 text-[rgb(199,210,254)]/70 hover:text-[rgb(121,205,255)] group transition-colors"
+                >
+                  <span className="text-[rgb(121,205,255)] group-hover:scale-110 transition-transform">
+                    {item.icon}
+                  </span>
+                  {item.text}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Add Additional Solutions Grid */}
+        <div className="border-t border-[rgb(121,205,255)]/20 pt-8 mb-16">
+          <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[rgb(121,205,255)] to-[rgb(199,210,254)] mb-6">
+            Additional Solutions
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {additionalSolutions.map((solution, index) => (
+              <div 
+                key={index}
+                className="p-4 rounded-lg bg-[rgb(121,205,255)]/5 hover:bg-[rgb(121,205,255)]/10 
+                  transition-all duration-300 group cursor-pointer border border-[rgb(121,205,255)]/20"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-[rgb(121,205,255)] group-hover:scale-110 transition-transform">
+                    {solution.icon}
+                  </span>
+                  <span className="text-[rgb(199,210,254)]/70 group-hover:text-[rgb(121,205,255)]">
+                    {solution.text}
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
