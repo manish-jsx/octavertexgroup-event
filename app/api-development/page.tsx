@@ -30,7 +30,7 @@ import {
     TableRow,
     Tabs,
     Tab
-} from "@nextui-org/react";
+} from "@heroui/react";
 
 const APIDevelopmentPage = () => {
     const contentRef = useRef<HTMLDivElement>(null);
