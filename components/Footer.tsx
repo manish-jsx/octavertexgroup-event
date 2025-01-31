@@ -324,30 +324,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Add Additional Solutions Grid */}
-        <div className="border-t border-[rgb(121,205,255)]/20 pt-8 mb-16">
-          <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[rgb(121,205,255)] to-[rgb(199,210,254)] mb-6">
-            Additional Solutions
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {additionalSolutions.map((solution, index) => (
-              <div 
-                key={index}
-                className="p-4 rounded-lg bg-[rgb(121,205,255)]/5 hover:bg-[rgb(121,205,255)]/10 
-                  transition-all duration-300 group cursor-pointer border border-[rgb(121,205,255)]/20"
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-[rgb(121,205,255)] group-hover:scale-110 transition-transform">
-                    {solution.icon}
-                  </span>
-                  <span className="text-[rgb(199,210,254)]/70 group-hover:text-[rgb(121,205,255)]">
-                    {solution.text}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        
 
         {/* Bottom Section */}
         <div className="border-t border-[rgb(121,205,255)]/20 pt-8">

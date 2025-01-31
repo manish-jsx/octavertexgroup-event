@@ -1,44 +1,5 @@
 
 
-// 'use client';
-
-// import { Boxes } from "@/components/ui/background-boxes";
-// import { cn } from "@/lib/utils";
-// import { motion } from 'framer-motion';
-// import Link from 'next/link';
-
-// export default function Hero() {
-//   return (
-//     <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center">
-//       <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-
-//       <Boxes />
-
-//       <div className="relative z-10 text-white flex justify-center items-center h-full">
-//         <motion.div
-//           initial={{ opacity: 0 }}
-//           animate={{ opacity: 1 }}
-//           transition={{ duration: 1 }}
-//           className="text-center"
-//         >
-//           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-//             🚀 Octavertex Media 🚀
-//           </h1>
-//           <p className="text-lg md:text-2xl mb-8">
-//             Ready to elevate your business with cutting-edge IT solutions and strategic marketing? <br /> Let's discuss how we can bring your projects to life!
-//           </p>
-//           <Link href="https://cal.com/octavertexmedia/">
-//             <span className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer">
-//               Schedule a Meeting
-//             </span>
-//           </Link>
-//         </motion.div>
-//       </div>
-//     </div>
-//   );
-// };
-
-
  
 "use client";
 import React from "react";
