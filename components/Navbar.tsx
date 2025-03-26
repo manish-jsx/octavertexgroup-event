@@ -22,6 +22,21 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Icons from "@/components/Icons";
 
+import { 
+  Layout, 
+  Users2, 
+  Truck, 
+  ShoppingBag, 
+  Box, 
+  Calculator,
+  Calendar,
+  BarChart2,
+  Filter,
+  Bot,
+  Brain,
+  Settings2
+} from 'lucide-react';
+
 // Define types for ListItem props
 interface ListItemProps {
   href: string;
@@ -65,15 +80,110 @@ const components = [
   },
 ];
 
+const products = [
+  {
+    title: "Enterprise Solutions",
+    items: [
+      {
+        title: "Enterprise CMS",
+        href: "/products/cms",
+        description: "Content Management System for large organizations",
+        icon: Layout
+      },
+      {
+        title: "HRMS Suite",
+        href: "/products/hrms",
+        description: "Complete HR & Workforce Management",
+        icon: Users2
+      },
+      {
+        title: "Delivery Management",
+        href: "/products/delivery",
+        description: "End-to-end delivery tracking & management",
+        icon: Truck
+      }
+    ]
+  },
+  {
+    title: "Business Solutions",
+    items: [
+      {
+        title: "E-commerce Platform",
+        href: "/products/ecommerce",
+        description: "Scalable e-commerce solution",
+        icon: ShoppingBag
+      },
+      {
+        title: "Supply Chain Manager",
+        href: "/products/supply-chain",
+        description: "Supply chain optimization & tracking",
+        icon: Box
+      },
+      {
+        title: "Budget Estimator",
+        href: "/products/budget",
+        description: "Project budgeting & cost estimation",
+        icon: Calculator
+      }
+    ]
+  },
+  {
+    title: "Smart Tools",
+    items: [
+      {
+        title: "Meeting Scheduler",
+        href: "/products/scheduler",
+        description: "Smart calendar & meeting management",
+        icon: Calendar
+      },
+      {
+        title: "Business Analytics",
+        href: "/products/analytics",
+        description: "Advanced business intelligence dashboard",
+        icon: BarChart2
+      },
+      {
+        title: "Funnel Builder",
+        href: "/products/funnel",
+        description: "Sales funnel creation & optimization",
+        icon: Filter
+      }
+    ]
+  },
+  {
+    title: "AI Solutions",
+    items: [
+      {
+        title: "AI Chatbots RAG",
+        href: "/products/chatbots",
+        description: "Retrieval-Augmented Generation chatbots",
+        icon: Bot
+      },
+      {
+        title: "AI Agents",
+        href: "/products/ai-agents",
+        description: "Autonomous AI agents for business tasks",
+        icon: Brain
+      },
+      {
+        title: "Process Automation",
+        href: "/products/automation",
+        description: "AI-powered workflow automation",
+        icon: Settings2
+      }
+    ]
+  }
+];
+
 export default function Navbar() {
   return (
     <div className="flex flex-row flex-nowrap justify-evenly items-center content-stretch py-4 bg-gray-900 text-white">
       <Icons />
       <NavigationMenu>
         <NavigationMenuList className="flex items-center space-x-6">
-          {/* Getting Started Menu */}
+          {/* Explore Menu */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Getting Started</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="bg-customDark text-white rounded-md">Explore</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-gray-800 text-white rounded-lg shadow-lg">
                 <li className="row-span-3">
@@ -89,30 +199,69 @@ export default function Navbar() {
                         Business ready solutions
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        Beautifully designed components built with Radix UI and
-                        Tailwind CSS.
+                        Kickstart your business with us.
                       </p>
                     </motion.div>
                   </Link>
                 </li>
                 <ListItem href="/about" title="About">
-                  Re-usable components built using Radix UI and Tailwind CSS.
+                  Want to know what we do ?
                 </ListItem>
                 <ListItem href="/case-studies" title="Case Studies">
-                  How to install dependencies and structure your app.
+                  Have a look on the projects and case studies we have completed
                 </ListItem>
                 <ListItem href="/portfolio" title="Portfolio">
-                  Styles for headings, paragraphs, lists, etc.
+                  Dive deep into our portfolio 
                 </ListItem>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          {/* Components Menu */}
+          {/* Products Menu - Make sure this is properly positioned */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="bg-customDark text-white rounded-md">
+              Our Products
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-gray-800 text-white rounded-lg shadow-lg">
+              <div className="w-[800px] p-4 bg-gray-800 rounded-xl">
+                <div className="grid grid-cols-4 gap-4">
+                  {products.map((category) => (
+                    <div key={category.title} className="space-y-2">
+                      <h3 className="text-sm font-medium text-gray-400 mb-2">
+                        {category.title}
+                      </h3>
+                      {category.items.map((item) => (
+                        <Link
+                          key={item.title}
+                          href={item.href}
+                          className="block p-2 rounded-lg hover:bg-gray-700/50 transition-colors group"
+                        >
+                          <div className="flex items-center gap-2">
+                            {item.icon && (
+                              <item.icon className="w-4 h-4 text-blue-400" />
+                            )}
+                            <span className="text-white group-hover:text-blue-400 transition-colors">
+                              {item.title}
+                            </span>
+                          </div>
+                          <p className="text-sm text-gray-400 mt-1">
+                            {item.description}
+                          </p>
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+
+
+          {/* Services Menu */}
+          <NavigationMenuItem>
+            <NavigationMenuTrigger className="bg-customDark text-white rounded-md">Services</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[450px] gap-3 p-4 md:grid-cols-2 bg-gray-800 text-white rounded-lg shadow-lg">
                 {components.map((component) => (
                   <ListItem
                     key={component.title}
@@ -127,11 +276,12 @@ export default function Navbar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          {/* Documentation Link */}
+          
+          {/* Contact Link */}
           <NavigationMenuItem>
             <Link
               href="/contact-us"
-              className="focus:outline-none hover:underline text-white"
+              className="focus:outline-none text-white hover:text-gray-300 hover:scale-105 transform transition duration-300 ease-in-out"
             >
               Get in Touch
             </Link>
