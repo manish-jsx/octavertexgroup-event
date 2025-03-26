@@ -181,71 +181,29 @@ const Hero = () => {
                     <h4 className="text-white font-bold">+145% Increase in Conversions</h4>
                   </div>
                   <div className="bg-blue-500/20 p-2 rounded-full">
-                    <ArrowRight className="w-4 h-4 text-blue-300" />
+                    <ArrowRight className="w-5 h-5 text-blue-300" />
                   </div>
                 </div>
               </div>
             </div>
-
-            {/* Floating elements */}
-            <motion.div 
-              animate={{ y: ["0%", "4%", "0%"] }} 
-              transition={{ duration: 5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-              className="absolute -top-6 -right-6 bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-4 rounded-xl backdrop-blur-md border border-white/10 shadow-xl"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-blue-500/30 rounded-full flex items-center justify-center">
-                  <CheckCircle className="w-4 h-4 text-blue-300" />
-                </div>
-                <div>
-                  <p className="text-xs text-blue-200">Recent Success</p>
-                  <p className="text-sm font-medium text-white">Website Redesign</p>
-                </div>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              animate={{ y: ["0%", "-4%", "0%"] }} 
-              transition={{ duration: 4, repeat: Infinity, repeatType: "reverse", ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-10 -left-8 bg-gradient-to-br from-purple-500/20 to-pink-500/20 p-4 rounded-xl backdrop-blur-md border border-white/10 shadow-xl max-w-[180px]"
-            >
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">📈</span>
-                <div>
-                  <p className="text-xs text-purple-200">Avg. Client Result</p>
-                  <p className="text-sm font-bold text-white">+85% ROI</p>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>
 
-      {/* Calendly Modal */}
+      {/* Calendly Widget Modal */}
       {showCalendly && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            className="bg-gray-900 rounded-xl overflow-hidden w-full max-w-4xl max-h-[80vh] relative shadow-2xl border border-blue-500/20"
-          >
-            <div className="p-4 bg-blue-900/30 border-b border-blue-500/20 flex justify-between items-center">
-              <h3 className="text-xl font-bold text-white">Schedule Your Free Consultation</h3>
+        <div className="fixed inset-0 bg-black/60 z-20">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="relative w-full max-w-2xl p-8 bg-white rounded-lg">
               <button
                 onClick={() => setShowCalendly(false)}
-                className="text-gray-400 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10"
+                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
               >
-                <X className="w-5 h-5" />
+                <X className="w-6 h-6" />
               </button>
+              <CalendlyWidget url="https://calendly.com/your-calendly-link" />
             </div>
-            <div className="h-[70vh] overflow-y-auto">
-              <CalendlyWidget 
-                url="https://calendly.com/octavertexmedia/free-consultation" 
-                styles={{ height: '100%', width: '100%' }}
-              />
-            </div>
-          </motion.div>
+          </div>
         </div>
       )}
     </section>
