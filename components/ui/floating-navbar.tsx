@@ -204,7 +204,9 @@ export const FloatingNav = ({
             "border-2 border-[rgb(121,205,255)] rounded-full",
             "bg-[rgb(15,24,41)]",
             "shadow-[0_0_20px_rgba(121,205,255,0.15),_inset_0_0_20px_rgba(121,205,255,0.05)]",
+
             "px-8 py-3",
+
             className
           )}
         >

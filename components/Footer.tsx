@@ -1,3 +1,4 @@
+
 'use client';
 import Link from "next/link";
 import { 
@@ -40,6 +41,7 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 
+
 const Footer = () => {
   const industriesServed = [
     { name: "Healthcare", icon: <Hospital className="w-4 h-4" /> },
@@ -81,10 +83,12 @@ const Footer = () => {
   ];
 
   return (
+
     <footer className="min-h-screen bg-[rgb(15,24,41)] text-white py-16">
       <div className="container mx-auto px-4">
         {/* Logo Section */}
         <div className="flex justify-center items-center gap-4 mb-16">
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 200 200"
@@ -134,6 +138,7 @@ const Footer = () => {
               className="h-4 w-auto" // Control height, maintain aspect ratio
             />
           </div>
+
         </div>
 
         {/* Main Content Grid */}
@@ -343,6 +348,7 @@ const Footer = () => {
                 Cookie Policy
               </Link>
             </div>
+
           </div>
         </div>
       </div>

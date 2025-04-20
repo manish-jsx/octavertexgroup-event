@@ -20,6 +20,7 @@ export default function Domain() {
       title: "2024",
       content: (
         <div className="space-y-8">
+
           <div className="relative group">
             <p className="text-[rgb(199,210,254)]/90 text-sm md:text-base font-medium leading-relaxed">
               Leading the digital transformation with advanced AI solutions, cloud-native applications, and innovative enterprise software
@@ -60,6 +61,7 @@ export default function Domain() {
                     Enterprise Solutions
                   </h4>
                   <p className="text-[rgb(199,210,254)]/80 text-sm">Scalable applications with cloud-native architecture</p>
+
                 </div>
               </div>
             </div>
@@ -72,6 +74,7 @@ export default function Domain() {
       content: (
         <div className="space-y-8">
           <div className="relative group p-6 rounded-2xl bg-gradient-to-br from-[rgba(24,204,252,0.03)] to-[rgba(99,68,245,0.03)] border border-[rgba(24,204,252,0.1)]">
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center space-y-2">
                 <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#18CCFC] to-[#6344F5]">
@@ -93,10 +96,12 @@ export default function Domain() {
               </div>
             </div>
   
+
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <h3 className="text-[#18CCFC] text-base font-semibold flex items-center gap-2">
                   <span className="h-1 w-4 bg-[#18CCFC] rounded-full" />
+
                   Frontend Excellence
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
@@ -110,6 +115,7 @@ export default function Domain() {
                         height={20}
                         className="object-contain"
                       />
+
                       {tech}
                     </div>
                   ))}
@@ -118,6 +124,7 @@ export default function Domain() {
               <div className="space-y-4">
                 <h3 className="text-[#6344F5] text-base font-semibold flex items-center gap-2">
                   <span className="h-1 w-4 bg-[#6344F5] rounded-full" />
+
                   Backend & AI
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
@@ -131,6 +138,7 @@ export default function Domain() {
                         height={20}
                         className="object-contain"
                       />
+
                       {tech}
                     </div>
                   ))}
@@ -142,6 +150,7 @@ export default function Domain() {
       ),
     },
     {
+
       title: "Latest Innovations",
       content: (
         <div className="space-y-8">
@@ -191,12 +200,14 @@ export default function Domain() {
                       {update.title}
                     </h4>
                     <p className="text-[rgb(199,210,254)]/70 text-sm mt-2 leading-relaxed">
+
                       {update.desc}
                     </p>
                   </div>
                 </div>
               </div>
             ))}
+
           </div>
 
           {/* Additional Tech Stack Section */}
@@ -230,6 +241,7 @@ export default function Domain() {
                 </div>
               ))}
             </div>
+
           </div>
         </div>
       ),

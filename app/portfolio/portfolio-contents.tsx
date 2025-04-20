@@ -242,7 +242,6 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
 };
 
 
-
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
@@ -252,7 +251,9 @@ export default function Portfolio() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+
           className="text-center px-4"
+
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
             Our Work

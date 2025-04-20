@@ -131,7 +131,9 @@ const About = () => {
   ];
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white z-10">
+
       {/* Hero Section */}
       <div className="relative h-[60vh] overflow-hidden flex items-center">
         <div 
@@ -143,12 +145,16 @@ const About = () => {
             backgroundRepeat: 'repeat'
           }}
         />
+
         <div className="container mx-auto px-4 relative">
+
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+
             className="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 leading-[100px]"
+
           >
             Pioneering Digital Excellence Since 2015
           </motion.h1>

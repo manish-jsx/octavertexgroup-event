@@ -1,3 +1,4 @@
+
 "use client";
 import { motion } from "framer-motion";
 
@@ -98,8 +99,7 @@ const WebDevelopmentPage = () => {
           Learn More
         </button>
       </motion.div>
-    </main>
-  );
-};
+
 
 export default WebDevelopmentPage;
+

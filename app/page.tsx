@@ -3,7 +3,9 @@ import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Domain from "@/components/Domain";
 import { FeaturesSection } from "@/components/FeatureSection";
+
 import TestimonialCarousel from "@/components/TestimonialCarousel";
+
 
 const Home = () => {
   return (
@@ -12,6 +14,7 @@ const Home = () => {
       <Services />
       <Domain />
       <FeaturesSection />
+
       <section className="relative min-h-screen py-16 overflow-hidden bg-[rgb(15,24,41)] w-screen">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
         <div className="relative z-10 w-full">
@@ -26,6 +29,7 @@ const Home = () => {
           <TestimonialCarousel />
         </div>
       </section>
+
       <Contact />
     </>
   );

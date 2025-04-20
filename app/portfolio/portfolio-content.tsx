@@ -81,7 +81,9 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, gridClasses }) => 
       viewport={{ once: true, margin: "-50px" }}
       className={`group relative transform-gpu h-full ${gridClasses}`}
     >
+
       <Link href={study.link} className="block h-full rounded-xl">
+
         <div className="absolute inset-0 bg-gradient-to-br 
           from-white/5 to-transparent opacity-0 group-hover:opacity-100 
           transition-all duration-500 rounded-3xl" />
@@ -401,7 +403,9 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
       {/* Hero Section */}
+
       <section className="relative h-[60vh] overflow-hidden flex items-center justify-center z-0">
+
         <motion.div 
           variants={containerVariants}
           initial="hidden"
@@ -479,8 +483,9 @@ export default function Portfolio() {
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+
           className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6 auto-rows-fr rounded-xl"
+
         >
           {caseStudies.map((study, index) => (
             <CaseStudyCard 
